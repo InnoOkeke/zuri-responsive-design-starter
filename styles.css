@@ -9,25 +9,29 @@
 
 div.nav-bar {
     display: flex;
+    flex-wrap: wrap;
+    align-items: left;
     justify-content: space-between;
     padding: 1rem 6rem;
-    width: 100vw;
+    width: 100%;
     background: #304353;
 }
 
 div.logo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #bcc3c7;
+    justify-content: center;
 }
 
 ul.nav-links {
     display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
 ul li {
-    margin: 0 2vw;
+    margin: 0.2vw;
     list-style: none;
     font-size: 1.1rem;
 }
@@ -46,11 +50,12 @@ ul li a:hover {
 
 div.hero-section {
     background: #304353;
-    padding: 10rem;
+    padding: 5rem;
 }
 
 div.hero-content-heading {
     text-align: center;
+    flex-wrap: wrap;
 }
 
 div.hero-content-heading h3 {
@@ -110,6 +115,7 @@ div.background h4 {
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-indent: inherit;
 }
 
 div.background p {
@@ -160,6 +166,7 @@ div.snapshot-box {
 
 div.snapshot-box-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -345,3 +352,18 @@ div.footer h6 {
     font-size: 1rem;
     padding-top: 6rem;
 }
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .div.logo {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .div.logo, .div.nav-bar, .div.background, .div.footer-input {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
